@@ -13,19 +13,14 @@ void merge(int pData[], int l, int m, int r)
     int n1 = m - l + 1;
     int n2 = r - m;
   
-    // Create temp arrays
     int L[n1], R[n2];
   
-    // Copy data to temp arrays
-    // L[] and R[]
+    
     for (i = 0; i < n1; i++)
         L[i] = pData[l + i];
     for (j = 0; j < n2; j++)
         R[j] = pData[m + 1 + j];
   
-    // Merge the temp arrays back
-    // into arr[l..r]
-    // Initial index of first subarray
     i = 0;
   
     // Initial index of second subarray
@@ -45,16 +40,13 @@ void merge(int pData[], int l, int m, int r)
         k++;
     }
   
-    // Copy the remaining elements
-    // of L[], if there are any
     while (i < n1) {
         pData[k] = L[i];
         i++;
         k++;
     }
   
-    // Copy the remaining elements of
-    // R[], if there are any
+
     while (j < n2) {
         pData[k] = R[j];
         j++;
@@ -65,8 +57,7 @@ void merge(int pData[], int l, int m, int r)
 void mergeSort(int pData[], int l, int r){
   
     if (l < r) {
-        // Same as (l+r)/2, but avoids
-        // overflow for large l and h
+
         int m = l + (r - l) / 2;
   
         // Sort first and second halves
@@ -103,7 +94,7 @@ void insertionSort(int* pData, int n)
 void bubbleSort(int* pData, int n)
 {
 	int i, j;
-    extraMemoryAllocated = 0; // Reset extra memory count for this function
+    extraMemoryAllocated = 0; 
 
     for (i = 0; i < n - 1; i++) {
         for (j = 0; j < n - i - 1; j++) {
@@ -122,7 +113,7 @@ void bubbleSort(int* pData, int n)
 void selectionSort(int* pData, int n)
 {
 	int i, j, min_idx;
-    extraMemoryAllocated = 0; // Reset extra memory count for this function
+    extraMemoryAllocated = 0; 
 
     for (i = 0; i < n - 1; i++) {
         min_idx = i;
