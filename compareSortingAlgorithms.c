@@ -59,8 +59,7 @@ void mergeSort(int pData[], int l, int r){
     if (l < r) {
 
         int m = l + (r - l) / 2;
-  
-        // Sort first and second halves
+        // mergesort implementations
         mergeSort(pData, l, m);
         mergeSort(pData, m + 1, r);
         merge(pData, l, m, r);
